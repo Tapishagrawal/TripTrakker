@@ -10,6 +10,50 @@ body {
     padding: 0;
 }
 
+/* Loader Start */
+#preloader{
+    text-align: center;
+    margin-top: 80px;
+}
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+
+circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash4 {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
+
+/* Loader End */
 header {
     width: 100%;
     background-color: #568676;
@@ -135,7 +179,24 @@ select::-ms-expand {
 .ep-select:hover::after {
     color: #c8c8c8;
 }
-    /* ====sorting section end==== */
+
+.ex-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #e9e9e9;
+    padding: 10px;
+}
+
+.ex-search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #e9e9e9;
+
+}
+
+/* ====sorting section end==== */
 /* Explore Card Start */
 
 #explore-page-cont {
@@ -208,7 +269,13 @@ select::-ms-expand {
     padding: 20px;
 }
 
-
+.explore-contant h4 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: #3d5f57;
+}
 
 .explore-contant>p {
     color: #00000096;
