@@ -105,6 +105,18 @@
         font-size: 30px;
         font-weight: 700;
     }
+    #res-conFormPass,
+    #res-Pass{
+        width: 80%;
+    }
+    .fa-eye:hover{
+        color: rgb(162, 190, 181)!important;
+        cursor: pointer;
+    }
+    .fa-eye-slash:hover{
+        color: rgb(162, 190, 181)!important;
+        cursor: pointer;
+    }
     </style>
 <body>
     <section id="register-page">
@@ -116,7 +128,7 @@
             </div>
             <div>
                 <i class="fa-solid fa-envelope"></i>
-                <input type="text" id ="res-email" placeholder="Enter your Email ID">
+                <input type="email" id ="res-email" placeholder="Enter your Email ID">
             </div>
             <div>
                 <i>@</i>
@@ -124,11 +136,12 @@
             </div>
             <div>
                 <i class="fa-solid fa-lock"></i>
-                <input type="text" id ="res-Pass" placeholder="Create Password">
+                <input type="password" id ="res-Pass" placeholder="Create Password">
             </div>
             <div>
                 <i class="fa-solid fa-lock"></i>
-                <input type="text" id ="res-conFormPass" placeholder="Conform Password">
+                <input type="password" id ="res-conFormPass" placeholder="Conform Password">
+                <i class="fa-regular fa-eye-slash"></i>
             </div>
             <div>
                 <input  id="res-btn" type="submit">
@@ -137,4 +150,29 @@
         </form>
     </section>
 </body>
+<script>
+    const pass = document.querySelector("#res-Pass")
+    const comPass = document.querySelector("#res-conFormPass")
+    let hideEye = document.querySelectorAll(".fa-eye-slash");
+    hideEye.forEach((i)=>{
+        i.addEventListener("click",()=>{
+            if(comPass.type=="password"){
+                pass.type="text"
+                comPass.type="text"
+
+            }else{
+                pass.type="password"
+                comPass.type="password"
+
+            }
+            if(i.classList[1]=="fa-eye-slash"){
+                i.classList.remove("fa-eye-slash")
+                i.classList.add("fa-eye")
+            }else{
+                i.classList.add("fa-eye-slash")
+                i.classList.remove("fa-eye")
+            }
+        })
+    })
+</script>
 </html>

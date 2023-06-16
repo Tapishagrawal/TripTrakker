@@ -59,6 +59,7 @@
         border: none;
         padding: 12px 12px 12px 8px;
         outline: none;
+        width: 80%;
     }
     #form-container p {
         text-align: end;
@@ -99,6 +100,14 @@
     #form-container .sub-btn ~ p a:hover{
         color: rgba(0, 135, 207, 0.642);;
     }
+    .fa-eye:hover{
+        color: rgb(162, 190, 181)!important;
+        cursor: pointer;
+    }
+    .fa-eye-slash:hover{
+        color: rgb(162, 190, 181)!important;
+        cursor: pointer;
+    }
     </style>
 <body>
     <section id="login-page">
@@ -115,6 +124,7 @@
             <div class="input-cont">
                 <i class="fa-solid fa-lock"></i>
                 <input type="password" id="password" placeholder="Password">
+                <i class="fa-regular fa-eye-slash"></i>
             </div>
             <p>Forgot Password?</p>
             <div class="sub-btn">
@@ -124,5 +134,25 @@
         </form>
     </section>
 </body>
-<script src="/knotty-sock-1389/js/login.js"></script>
+<script>
+    const pass = document.querySelector("#password")
+    const hideEye = document.querySelectorAll(".fa-eye-slash")
+    hideEye.forEach((i)=>{
+        i.addEventListener("click",()=>{
+            if(pass.type==="password"){
+                pass.type="text"
+            }else{
+                pass.type="password"
+            }
+            if(i.classList[1]==="fa-eye-slash"){
+                i.classList.remove("fa-eye-slash")
+                i.classList.add("fa-eye")
+            }else{
+                i.classList.remove("fa-eye")
+                i.classList.add("fa-eye-slash")
+            }
+        })
+    })
+</script>
+<script src="js/login.js"></script>
 </html>
