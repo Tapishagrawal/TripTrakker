@@ -78,10 +78,28 @@ nav img {
     font-family: 'Poppins';
     transition: all 0.3s ease;
 }
+.btn-log{
+    background-color: transparent;
+    border: 1px solid #1d322e;
+    padding: 5px 15px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
 
-.btn:hover {
+.btn:hover{
     background-color: #e8bf4e;
     cursor: pointer;
+    color: #fff4db;
+}
+.btn-log:hover{
+    cursor: pointer;
+    background-color: #3d5f57;
+    color: #fff4db;
 }
 
 /* NavBar End */
