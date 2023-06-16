@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    *{
+        box-sizing: border-box;
+        font-family: "poppins";
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    #login-page{
+        background-image: url("/knotty-sock-1389/img/travel-login.svg");
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position-x:left ;
+        background-position-y:center ;
+        background-size: calc(50%);
+        position: relative;
+    }
+    .user-img-cont{
+        width: 100%;
+        text-align: center;
+    }
+    .user-img-cont>img{
+        width: 100px;
+    }
+    .user-img-cont>h1{
+        font-size: 35px;
+        color: #282828;
+        font-weight: 600;
+    }
+    #form-container{
+        position: absolute;
+        right: 14%;
+        top: 14%;
+        width: 25%;
+        transform: translate(10px, 10px);
+    }
+    .input-cont{
+        width: 100%;
+        margin-block:10px ;
+        border-bottom: 1px solid #b1b1b1;
+    }
+    .input-cont i{
+        color: #244738;
+        margin-left: 10px;
+    }
+    .input-cont input{
+        border: none;
+        padding: 12px 12px 12px 8px;
+        outline: none;
+    }
+    #form-container p {
+        text-align: end;
+        color: #333;
+        font-size: 12px;
+    }
+    .sub-btn{
+        text-align: center;
+    }
+    #form-container button{
+        width: 100px;
+        padding: 9px 10px;
+        color: whitesmoke;
+        font-size: 15px;
+        font-weight: 500;
+        margin: auto;
+        color: white;
+        background-color: #499071;
+        border: none;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    #form-container button:hover{
+        background-color: #3c765d;
+        cursor: pointer;
+    }
+    .wave{
+    }
+    </style>
+<body>
+    <section id="login-page">
+        <div class="wave"></div>
+        <form id="form-container">
+            <div class="user-img-cont">
+                <img src="/knotty-sock-1389/img/user.svg" alt="">
+                <h1>WELCOME</h1>
+            </div>
+            <div class="input-cont">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="userName" placeholder="Username">
+            </div>
+            <div class="input-cont">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <p>Forgot Password?</p>
+            <div class="sub-btn">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

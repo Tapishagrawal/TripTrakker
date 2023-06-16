@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    *{
+        box-sizing: border-box;
+        font-family: "poppins";
+    }
+    body{
+        margin: 0;
+        padding: 0;   
+    }
+    #register-page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #res-form{
+        position: relative;
+        width: 30%;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        border-radius: 10px;
+    }
+    #res-form > div:not(:last-child){
+        margin-block:20px ;
+        width: 100%;
+        border-bottom: 1px solid #cccccc;
+        border-radius: 5px;
+    }
+    #res-form > div:last-child{
+        text-align: center;
+
+    }
+    #res-form > div i{
+        padding-left: 5px;
+        color: #385148;
+        font-style: normal;
+    }
+    #res-form > div:nth-child(4) i{
+        font-weight: 800;
+    }
+    #res-form > div input{
+        outline: none;
+        border: none;
+        padding: 10px;
+    }
+    #res-btn{
+        border: none;
+        background-color: #41866d;
+        color: white;
+        font-size: 15px;
+        width: 115px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    #res-btn:hover{
+        background-color: #2b5f4c;
+        cursor: pointer;
+    }
+    #res-form >h1{
+        text-align: center;
+        color: #232f2a;
+        position: relative;
+    }
+    #res-form >h1::before{
+        position: absolute;
+        content: "";
+        width: 30%;
+        height: 0.5px;
+        background-color: #232f2a;
+        bottom: 0;
+
+    }
+    .res-cross{
+        position: absolute;
+        right: 19px;
+        top: 19px;
+    }
+    .res-cross:hover{
+        color: #408a6f;
+        cursor: pointer;
+    }
+    </style>
+<body>
+    <section id="register-page">
+        <form id="res-form">
+            <i class="fa-solid fa-x res-cross"></i>
+            <h1>REGISTER</h1>
+            <div>
+                <i class="fa-solid fa-user"></i>    
+                <input type="text" id="res-name" placeholder="Enter Your Name">
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" id ="res-email" placeholder="Enter your Email ID">
+            </div>
+            <div>
+                <i>@</i>
+                <input type="text" id ="res-usrID" placeholder="Create user ID">
+            </div>
+            <div>
+                <i class="fa-solid fa-lock"></i>
+                <input type="text" id ="res-Pass" placeholder="Create Password">
+            </div>
+            <div>
+                <i class="fa-solid fa-lock"></i>
+                <input type="text" id ="res-conFormPass" placeholder="Conform Password">
+            </div>
+            <div>
+                <input  id="res-btn" type="submit">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
