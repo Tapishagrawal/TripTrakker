@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
     <!-- Header Navbar Saect Start -->
     <header>
-        <nav>
+        <nav class="open">
+            <div class="mobile-manu">
+                <i class="fa-solid fa-bars "></i>
+            </div>
             <div class="logo">
                 <img src="img/TripTrekker.png" alt="">
             </div>
@@ -153,7 +158,9 @@
             <div class="about-contant">
                 <h1>Find Your Inner Finn</h1>
                 <p>We believe that happiness is not a mystical ability you are born with – it’s an approach to life that you can learn. As the happiest country in the world for 6 consecutive years, we’re launching the Masterclass of Happiness – a journey to finding your inner Finn.</p>
-                <a href="#" class="btn">Read More</a>
+                <div>
+                    <a href="#" class="btn">Read More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -535,6 +542,14 @@
     </footer>
     <!-- Footer End -->
 </body>
+<script>
+    const menu = document.querySelector(".mobile-manu>i")
+    const nevMenu = document.querySelector(".nav-manu")
+    menu.addEventListener("click", () =>{
+        menu.classList.toggle("fa-x")
+        nevMenu.classList.toggle("open")
+    })
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="js/index.js"></script>
 <script src="js/login.js"></script>
