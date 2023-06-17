@@ -73,7 +73,13 @@ nav {
     padding-block: 10px;
 
 }
-
+.mobile-manu{
+    display: none;
+}
+.mobile-manu .fa-bars{
+    color: #fff;
+    font-size: 20px;
+}   
 .logo {
     width: 10%;
 }
@@ -122,12 +128,31 @@ nav img {
     font-family: 'Poppins';
     transition: all 0.3s ease;
 }
+.btn-log{
+    background-color: transparent;
+    border: 1px solid #1d322e;
+    padding: 5px 15px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
 
 .btn:hover {
     background-color: #e8bf4e;
     cursor: pointer;
 }
-
+.btn-log:hover{
+    cursor: pointer;
+    background-color: #54827847;
+    color: #fff8e9;
+}
+nav > div:last-child .btn{
+    display: none;
+}
 /* NAvbar End */
 /* ====sorting section Start=== */
 select {
@@ -416,7 +441,36 @@ ul {
     padding-left: 8px;
 }
 
-@media(max-width:767px) {
+@media screen and (max-width: 1025px) {
+    #explore-page-fun>div {
+        width: 38%;
+    }
+    #explore-page-cont {
+        display: initial;
+    }
+    .explore-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-social-link a i {
+        margin: 5px;
+    }
+    #explore-page-fun>div {
+        text-align: center;
+    }
+    #explore-page-fun {
+        border-bottom: 1px solid #d8d8d8;
+    }
+}
+@media screen and (max-width: 769px){
+    .logo {
+        width: 15%;
+    }
+    .nav-manu {
+        width: 44%;
+    }
+    .explore-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
@@ -425,19 +479,121 @@ ul {
     .footer-col img {
         width: 60%;
     }
+
+}
+@media screen and (max-width: 591px){
+    .mobile-manu {
+        display: initial!important;
+        cursor: pointer;
+    }
+    .nav-manu{
+        display: none;
+        width: 214px;
+        position: absolute;
+        background-color: #376B62;
+        height: 300px;
+        top: 102%;
+        left: -250px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(27, 27, 27, 0.338) 0px 6px 6px;
+        z-index: 1;        
+    }
+    .logo {
+        width: 70%;
+    }   
+    nav img {
+        width: 100px;
+    }
+    #explore-card {
+        width: 97%;
+    }
+    .footer-row {
+        justify-content: center;
+    }
+    .footer-container {
+        margin-left: 0%;
+    }
+    .footer-col {
+        width: 70%;
+    }
+    nav{
+        position: relative;
+    }
+    .nav-manu.open{
+        display: initial;
+        left: -25px;
+    }
+    .nav-manu.open a{
+        display: block;
+        margin-block:20px ;
+        font-weight: 500;
+        border-bottom: 1px solid #ffffff4e;
+        padding-bottom:10px ;
+    }
 }
 
-@media(max-width:425px) {
-    .footer-col {
+@media screen and (max-width: 426px){
+    .logo {
+        width: 54%;
+    }
+    #hero h1 {
+        font-size: 19px;
+    }
+    #card-slide h1,
+    #explore-card h1 {
+        font-size: 23px;
+        font-weight: 600;
+    }
+    #card-slide {
+        width: 99%;
+    }
+    #about .left {
         width: 100%;
+    }
+    #about .right {
+        width: 90%;
+    }
+    #explore-card h1::before,
+    #card-slide h1::before  {
+        top: -5px;
+        width: 30%;
+    }
+    .explore-card-container {
+        grid-template-columns: 1fr;
+    }
+    #explore-card {
+        width: 90%;
+    }
+    .testimonialBox {
+        margin: auto;
+        width: 224px;
+        padding: 42px 0px;
+        padding-top: 42px;
+    }
+    .testimonialBox i {
+        right: 0px;
+    }
+    #faq-container h1 {
+        font-size: 23px;
+        font-weight: 600;
+    }
+    .faq-question {
+        font-size: 10px;
+    }
+    .faq-question i {
+        font-size: 14px;
+    }
+    .faq-ans p {
+        font-size: 9px;
+    }
+    .footer-col {
+        width: 70%;
         margin-bottom: 30px;
     }
-
     .footer-col img {
         width: 60%;
     }
 
-    .footer-container {
-        margin-left: 27%;
-    }
 }
+/* ========================================= */
