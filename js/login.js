@@ -47,10 +47,19 @@ form.addEventListener("submit", function (e) {
         setTimeout(()=>{
             window.location.href = "index.html";
 
-        },200)
+        },500)
         localStorage.setItem("Islogin","true")
     } else {
         swal("Invalid username!");
     }
 });
 // form Data End
+
+const button = document.querySelector(".button");
+    button.addEventListener("click", (e) => {
+        e.preventDefault;
+        button.classList.add("animate");
+        setTimeout(() => {
+            button.classList.remove("animate");
+        }, 600);
+    });
