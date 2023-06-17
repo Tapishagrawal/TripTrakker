@@ -29,7 +29,13 @@ nav {
     padding-block: 10px;
 
 }
-
+.mobile-manu{
+    display: none;
+}
+.mobile-manu .fa-bars{
+    color: #fff;
+    font-size: 20px;
+}
 .logo {
     width: 10%;
 }
@@ -77,11 +83,28 @@ nav img {
     font-weight: 500;
     font-family: 'Poppins';
     transition: all 0.3s ease;
+    display: none;
 }
-
 .btn:hover {
     background-color: #e8bf4e;
     cursor: pointer;
+}
+.btn-log{
+    background-color: transparent;
+    border: 1px solid #1d322e;
+    padding: 5px 15px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
+.btn-log:hover{
+    cursor: pointer;
+    background-color: #54827847;
+    color: #fff8e9;
 }
 /* NAvbar End */
 
@@ -239,25 +262,98 @@ ul{
     color: #fff;
     padding-left: 8px;
 }
-@media(max-width:767px){
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
+/* Footer End */
+
+@media screen and (max-width: 1025px) {
+    .contact-form-img {
+        width: 40%;
     }
-    .footer-col img {
-        width: 60%;
+    #contact-form {
+        width: 55%;
     }
 }
-@media(max-width:425px){
-    .footer-col{
-        width: 100%;
-        margin-bottom: 30px;
+@media screen and (max-width: 769px){
+    .logo {
+        width: 15%;
     }
-    .footer-col img {
+    .nav-manu {
+        width: 44%;
+    }
+    .form-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+    #contact-form {
+        width: 75%;
+    }
+    .contact-form-img {
         width: 60%;
+    }
+
+}
+@media screen and (max-width: 591px){
+    .mobile-manu {
+        display: initial!important;
+        cursor: pointer;
+    }
+    .nav-manu{
+        z-index: 1;
+        display: none;
+        width: 214px;
+        position: absolute;
+        background-color: #376B62;
+        height: 300px;
+        top: 102%;
+        left: -250px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(27, 27, 27, 0.338) 0px 6px 6px;
+        
+    }
+    .logo {
+        width: 70%;
+    }   
+    nav img {
+        width: 100px;
+    }
+    #contact-form {
+        width: 100%;
+    }
+    .contact-form-img {
+        width: 75%;
+    }
+    .footer-row {
+        justify-content: center;
     }
     .footer-container {
-        margin-left: 27%;
+        margin-left: 0%;
+    }
+    .footer-col {
+        width: 70%;
+    }
+    nav{
+        position: relative;
+    }
+    .nav-manu.open{
+        display: initial;
+        left: 3px;
+    }
+    .nav-manu.open a{
+        display: block;
+        margin-block:20px ;
+        font-weight: 500;
+        border-bottom: 1px solid #ffffff4e;
+        padding-bottom:10px ;
     }
 }
-/* Footer End */
+
+@media screen and (max-width: 426px){
+    .logo {
+        width: 54%;
+    }
+    #hero h1 {
+        font-size: 19px;
+    }
+
+    
+}
