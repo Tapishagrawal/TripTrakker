@@ -21,15 +21,22 @@ header {
 /* NavBar Start */
 
 nav {
-    width: 90%;
+    width: 100%;
+    padding-inline:30px ;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-block: 10px;
-
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+.mobile-manu{
+    display: none;
+}
+.mobile-manu .fa-bars{
+    color: #fff;
+    font-size: 20px;
+}
 .logo {
     width: 10%;
 }
@@ -98,10 +105,13 @@ nav img {
 }
 .btn-log:hover{
     cursor: pointer;
-    background-color: #3d5f57;
-    color: #fff4db;
+    background-color: #54827847;
+    color: #fff8e9;
 }
 
+nav > div:last-child .btn{
+    display: none;
+}
 /* NavBar End */
 
 
@@ -752,7 +762,7 @@ ul{
     background-color: #4c4c4c;
     text-decoration: none;
     border-radius: 50%;
-    font-size: 18 px;
+    font-size: 18px;
     padding: 10px 14px;
 
 }
@@ -771,6 +781,9 @@ ul{
     }
     .footer-col img {
         width: 60%;
+    }
+    .footer-social-link a i {
+        margin: 5px;
     }
 }
 @media(max-width:425px){
