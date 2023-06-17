@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>TripTrekker | Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <section id="login-page">
-        <div class="wave"></div>
         <form id="form-container">
             <div class="user-img-cont">
                 <img src="/knotty-sock-1389/img/user.svg" alt="">
@@ -17,40 +16,21 @@
             </div>
             <div class="input-cont">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" id="userName" placeholder="Username">
+                <input type="text" id="userName" placeholder="Username" required>
             </div>
             <div class="input-cont">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="password" placeholder="Password" required>
                 <i class="fa-regular fa-eye-slash"></i>
             </div>
             <p>Forgot Password?</p>
             <div class="sub-btn">
-                <button type="submit">Login</button>
+                <input type="submit" value="Submit" >
             </div>
             <p>Don't have an account? <a href="register.html">Sign up</a></p>
         </form>
     </section>
 </body>
-<script>
-    const pass = document.querySelector("#password")
-    const hideEye = document.querySelectorAll(".fa-eye-slash")
-    hideEye.forEach((i)=>{
-        i.addEventListener("click",()=>{
-            if(pass.type==="password"){
-                pass.type="text"
-            }else{
-                pass.type="password"
-            }
-            if(i.classList[1]==="fa-eye-slash"){
-                i.classList.remove("fa-eye-slash")
-                i.classList.add("fa-eye")
-            }else{
-                i.classList.remove("fa-eye")
-                i.classList.add("fa-eye-slash")
-            }
-        })
-    })
-</script>
 <script src="js/login.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

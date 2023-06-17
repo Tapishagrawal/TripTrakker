@@ -2,17 +2,62 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
 
+/* Loader Start */
+#preloader {
+    text-align: center;
+    margin-top: 80px;
+}
+
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+
+circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash4 {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
+
+/* Loader End */
 header {
     width: 100%;
-    background-color:#568676;
+    background-color: #568676;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -29,13 +74,16 @@ nav {
     padding-block: 10px;
 
 }
-.mobile-manu{
+
+.mobile-manu {
     display: none;
 }
-.mobile-manu .fa-bars{
+
+.mobile-manu .fa-bars {
     color: #fff;
     font-size: 20px;
 }
+
 .logo {
     width: 10%;
 }
@@ -74,19 +122,7 @@ nav img {
     width: 35px;
 }
 
-.btn {
-    background-color: #FACE54;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 14px;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'Poppins';
-    transition: all 0.3s ease;
-    display: none;
-}
-#btn-login,
-#btn-logout{
+#btn-logout {
     background-color: transparent;
     border: 1px solid #1d322e;
     padding: 5px 15px;
@@ -98,137 +134,79 @@ nav img {
     text-decoration: none;
     color: #000;
 }
-#btn-logout{
-    display: none;
-}
-nav>div:last-child .btn{
-    display: none;
-}
-.btn:hover{
-    background-color: #e8bf4e;
-    cursor: pointer;
-    color: #fff4db;
-}
-#btn-login:hover,
-#btn-logout:hover{
+
+#btn-logout:hover {
     cursor: pointer;
     background-color: #54827847;
     color: #fff8e9;
 }
+
 /* NAvbar End */
 
-/* contect Start */
-#form-section{
-    margin-top: 60px;
-    width: 90%;
-    margin: auto;
+/* showcase section Start */
+.swiper {
+    width: 100%;
+    height: 100%;
 }
-#form-section h1{
-    color: #000;
-    position: relative;
-    text-align:center;
-    font-size: 32px;
-    font-weight: 500;
-}
-#form-section>h1::before{
-    position: absolute;
-    content: "";
-    height: 1px;
-    width: 16%;
-    background-color: #3d5f57;
-    top: 44px;
-    left: 42%;
-}
-.form-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#contact-form{
-    width: 45%;
+
+.swiper-slide {
     text-align: center;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    padding-block: 20px;
-    border-radius: 8px;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.contact-form-img{
-    width: 50%;
-}
-.name-email-cont,
-.num-sub-cont{
-    margin-block: 20px;
+
+.swiper-slide img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-#contact-form #name,
-#contact-form #email,
-#contact-form #number,
-#contact-form #subject{
-    width: 46%;
-    padding: 8px;
-    font-family: "poppines";
-    font-size: 15px;
-    border: none;
-    background-color: #434f6c30;
-    border-radius: 3px;
-    color: #4c4c4c;
-    outline: none;
-}
-#form-msg{
-    width: 93%;
-    font-family: "poppines";
-    font-size: 15px;
-    border: none;
-    background-color: #434f6c30;
-    border-radius: 3px;
-    color: #4c4c4c; 
-    padding: 8px;
-    outline: none;
-}
-.contact-foBtn {
-    margin-top: 10px;
-}
-.contact-foBtn .btn{
-    display: inline;
-    padding: 5px 65px  ;
-}
-.contact-form-img img{
-    width: 100%;
-}
-/* contect End */
+
+/* showcase section End */
 
 /* Footer End */
-footer{
+footer {
     background-color: #1d322e;
-    margin-top: 60px;   
+    margin-top: 60px;
 }
-.footer-row{
+
+.footer-row {
     display: flex;
     flex-wrap: wrap;
 }
-.footer-container{
+
+.footer-container {
     width: 90%;
     margin: auto;
     padding-block: 20px;
 }
-.footer-col{
+
+.footer-col {
     width: 25%;
     padding: 0 15px;
 }
+
 .footer-row .footer-col:first-child {
     margin-top: 26px;
     padding-left: 0;
 }
-.footer-col img{
+
+.footer-col img {
     width: 100%;
 }
-.footer-col h4{
+
+.footer-col h4 {
     color: #fff;
     font-size: 18px;
-    text-transform:capitalize ;
+    text-transform: capitalize;
     margin-bottom: 30px;
     position: relative;
 }
-.footer-col h4::before{
+
+.footer-col h4::before {
     position: absolute;
     content: "";
     left: 0;
@@ -237,24 +215,28 @@ footer{
     height: 2px;
     width: 50px;
 }
-ul{
+
+ul {
     list-style: none;
     padding: 0;
 }
-.footer-col ul li:not(:last-child){
+
+.footer-col ul li:not(:last-child) {
     margin-bottom: 10px;
 }
+
 .footer-col ul li a,
-.footer-social-link i{
+.footer-social-link i {
     font-size: 16px;
     text-transform: capitalize;
-    text-decoration: none ;
+    text-decoration: none;
     font-weight: 300;
     color: #bbbbbb;
     display: block;
     transition: all 0.3s ease;
 }
-.footer-social-link a i{
+
+.footer-social-link a i {
     display: inline-block;
     background-color: #4c4c4c;
     text-decoration: none;
@@ -263,50 +245,50 @@ ul{
     padding: 10px 14px;
 
 }
-.footer-social-link a i:hover{
+
+.footer-social-link a i:hover {
     color: #fff;
     background-color: #a5a5a5;
 }
-.footer-col ul li a:hover{
+
+.footer-col ul li a:hover {
     color: #fff;
     padding-left: 8px;
 }
-/* Footer End */
 
 @media screen and (max-width: 1025px) {
-    .contact-form-img {
-        width: 40%;
-    }
-    #contact-form {
-        width: 55%;
+    .footer-social-link a i {
+        margin: 5px;
     }
 }
-@media screen and (max-width: 769px){
+
+@media screen and (max-width: 769px) {
     .logo {
         width: 15%;
     }
+
     .nav-manu {
         width: 44%;
     }
-    .form-container {
-        flex-direction: column;
-        gap: 35px;
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
     }
-    #contact-form {
-        width: 75%;
-    }
-    .contact-form-img {
+
+    .footer-col img {
         width: 60%;
     }
 
 }
-@media screen and (max-width: 591px){
+
+@media screen and (max-width: 591px) {
     .mobile-manu {
-        display: initial!important;
+        display: initial !important;
         cursor: pointer;
     }
-    .nav-manu{
-        z-index: 1;
+
+    .nav-manu {
         display: none;
         width: 214px;
         position: absolute;
@@ -317,52 +299,63 @@ ul{
         padding: 20px;
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(27, 27, 27, 0.338) 0px 6px 6px;
-        
+        z-index: 1;
     }
+
     .logo {
         width: 70%;
-    }   
+    }
+
     nav img {
         width: 100px;
     }
-    #contact-form {
-        width: 100%;
-    }
-    .contact-form-img {
-        width: 75%;
-    }
+
     .footer-row {
         justify-content: center;
     }
+
     .footer-container {
         margin-left: 0%;
     }
+
     .footer-col {
         width: 70%;
     }
-    nav{
+
+    nav {
         position: relative;
     }
-    .nav-manu.open{
+
+    .nav-manu.open {
         display: initial;
-        left: 3px;
+        left: -25px;
     }
-    .nav-manu.open a{
+
+    .nav-manu.open a {
         display: block;
-        margin-block:20px ;
+        margin-block: 20px;
         font-weight: 500;
         border-bottom: 1px solid #ffffff4e;
-        padding-bottom:10px ;
+        padding-bottom: 10px;
     }
 }
 
-@media screen and (max-width: 426px){
+@media screen and (max-width: 426px) {
     .logo {
         width: 54%;
     }
+
     #hero h1 {
         font-size: 19px;
     }
 
-    
+    .footer-col {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .footer-col img {
+        width: 60%;
+    }
+
 }
