@@ -1,4 +1,4 @@
-const pass = document.querySelector("#res-Pass")
+const pass = document.querySelector("#res-pass")
     const comPass = document.querySelector("#res-conFormPass")
     let hideEye = document.querySelectorAll(".fa-eye-slash");
     hideEye.forEach((i)=>{
@@ -21,3 +21,20 @@ const pass = document.querySelector("#res-Pass")
             }
         })
     })
+
+const form = document.querySelector("form");
+let formLocalData = JSON.parse(localStorage.getItem("form-data"))|| [];
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let formData = {
+        name: form['res-name'].value,
+        email: form['res-email'].value,
+        useId: form['res-userID'].value,
+        pass: form['res-pass'].value,
+        comPass: form['res-conFormPass'].value
+    }
+    formLocalData.push(formData);
+    localStorage.setItem("form-data",JSON.stringify(formLocalData))
+    form.reset()
+    window.location.href = "login.html";
+})

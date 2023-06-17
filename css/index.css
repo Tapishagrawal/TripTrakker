@@ -84,10 +84,10 @@ nav img {
     font-weight: 500;
     font-family: 'Poppins';
     transition: all 0.3s ease;
-    display: none;
 
 }
-.btn-log{
+#btn-login,
+#btn-logout{
     background-color: transparent;
     border: 1px solid #1d322e;
     padding: 5px 15px;
@@ -99,13 +99,19 @@ nav img {
     text-decoration: none;
     color: #000;
 }
-
+#btn-logout{
+    display: none;
+}
+nav>div:last-child .btn{
+    display: none;
+}
 .btn:hover{
     background-color: #e8bf4e;
     cursor: pointer;
     color: #fff4db;
 }
-.btn-log:hover{
+#btn-login:hover,
+#btn-logout:hover{
     cursor: pointer;
     background-color: #54827847;
     color: #fff8e9;
