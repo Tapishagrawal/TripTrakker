@@ -36,21 +36,21 @@ form.addEventListener("submit", function (e) {
                 isLoggedIn = true;
                 break;
             } else {
-                swal("Wrong password!");
+                swal("Wrong password!", "", "error");
                 return; 
             }
         }
     }
 
     if (isLoggedIn) {
-        swal("Login successful!", "Welcome to TrepTrekker");
+        swal("Login successful!", "Welcome to TrepTrekker","success");
         setTimeout(()=>{
             window.location.href = "index.html";
 
         },500)
         localStorage.setItem("Islogin","true")
     } else {
-        swal("Invalid username!");
+        swal("Invalid username!", "", "error");
     }
 });
 // form Data End
