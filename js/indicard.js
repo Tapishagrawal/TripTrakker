@@ -118,6 +118,6 @@ function priceRateDisplay(data) {
 
         rating.innerText = item.rating
 
-        price.innerText = item.price
+        price.innerText = "RS. "+item.price
     })
 }

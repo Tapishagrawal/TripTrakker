@@ -343,12 +343,16 @@ function display(data) {
         kowBtn.setAttribute("class", "btn")
         exploreBtnCont.append(heart, kowBtn)
         exploreContant.append(priceRatingCont, exploreBtnCont)
+
         // redirecting page start
+        let arr = []
         kowBtn.addEventListener("click", () => {
             kowBtn.target = "_blank"
             if (flage === "true") {
                 window.open("indicard.html", "_blank")
-                localStorage.setItem("indicard-data", JSON.stringify(item))
+                arr.push(item)
+                localStorage.setItem("indicard-data", JSON.stringify(arr))
+                arr=[]
             } else {
                 swal("You are not login!", "", "error");
             }
@@ -366,4 +370,11 @@ const nevMenu = document.querySelector(".nav-manu")
 menu.addEventListener("click", () => {
     menu.classList.toggle("fa-x")
     nevMenu.classList.toggle("open")
+})
+
+window.addEventListener("scroll",()=>{
+    setTimeout(()=>{
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("sticky", window.scrollY > 0)
+    },200)
 })
