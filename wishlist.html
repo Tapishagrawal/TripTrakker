@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TripTrekker | Explore</title>
-    <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="css/wishlist.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -28,7 +28,7 @@
                 <a href="contact.html">Contact</a>
             </div>
             <div>
-                <a href="wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i></a>
+                <i class="fa-sharp fa-regular fa-heart"></i>
                 <button class="btn">Book Now</button>
                 <a id="btn-login" href="login.html" target="_blank">Log in</a>
                 <a id="btn-logout" href="">Log out</a>
@@ -39,34 +39,15 @@
 
     
     <section id="explore-page-cont">
-        <div id="explore-page-fun">
-            <div>
-                <h4>Filter <i class="fa-solid fa-filter"></i></h4>
-            </div>
-            <div class="ep-select">
-                <select id="sort-by-price">
-                    <option value="">Choose Price</option>
-                    <option value="high">High to Low</option>
-                    <option value="low">Low to High</option>
-                </select>
-            </div>
-            <div class="ep-select">
-                <select id="sort-by-rating">
-                    <option value="" >Choose Rating</option>
-                    <option value="high">High to Low</option>
-                    <option value="low">Low to High</option>
-                </select>
-            </div>
-            <div class="ex-search">
-                <input type="text" id="searchInp" placeholder="Search City">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
         <div id="explore-card">
             <div id="preloader">
                 <svg viewBox="25 25 50 50">
                     <circle r="20" cy="50" cx="50"></circle>
                 </svg>
+            </div>
+            <div class="empty">
+                <img src="/knotty-sock-1389/img/emptdata.svg" alt="">
+                <h1>No Data Available!</h1>
             </div>
             <div class="explore-card-container"></div>
         </div>
@@ -111,6 +92,6 @@
     </footer>
     <!-- Footer End -->
 </body>
-<script src="js/explore.js"></script>
+<script src="js/wishlist.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </html>

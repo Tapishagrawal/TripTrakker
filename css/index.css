@@ -40,7 +40,9 @@ nav {
 .logo {
     width: 10%;
 }
-
+.nav-manu > .logo{
+    display: none;
+}
 nav img {
     width: 100%;
 }
@@ -74,8 +76,34 @@ nav img {
 .nav-manu>a:hover::before {
     width: 35px;
 }
-
-.btn {
+a{
+    text-decoration: none;
+}
+nav .fa-sharp{
+    color:#cfefe1;
+    font-size: 20px;
+    margin-right: 10px;
+    display: none;
+    position: relative;
+}
+nav .fa-sharp::after{
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #376B62   ;
+    border-radius: 50%;
+    top: -1px;
+    right: -4px;
+}
+nav .fa-sharp:hover{
+    cursor: pointer;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
+.btn a{
     background-color: #FACE54;
     border: none;
     padding: 5px 12px;
@@ -84,7 +112,14 @@ nav img {
     font-weight: 500;
     font-family: 'Poppins';
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
 
+.btn a:hover{
+    background-color: #e8bf4e;
+    cursor: pointer;
+    color: #fff4db;
 }
 #btn-login,
 #btn-logout{
@@ -104,11 +139,6 @@ nav img {
 }
 nav>div:last-child .btn{
     display: none;
-}
-.btn:hover{
-    background-color: #e8bf4e;
-    cursor: pointer;
-    color: #fff4db;
 }
 #btn-login:hover,
 #btn-logout:hover{
@@ -917,7 +947,7 @@ ul{
     }
 
 }
-@media screen and (max-width: 591px){
+@media screen and (max-width: 642px){
     .mobile-manu {
         display: initial!important;
         cursor: pointer;
@@ -936,7 +966,7 @@ ul{
         
     }
     .logo {
-        width: 70%;
+        width: 40%;
     }   
     nav img {
         width: 100px;
@@ -981,7 +1011,18 @@ ul{
         padding-bottom:10px ;
     }
 }
-
+@media screen and (max-width: 472px){
+    nav .fa-sharp{
+        display: none;
+    }
+    .nav-manu > .logo{
+        display: initial;
+    }
+    .logo{
+        display: none;
+    }
+    
+}
 @media screen and (max-width: 426px){
     .logo {
         width: 54%;
@@ -1036,5 +1077,7 @@ ul{
     .faq-ans p {
         font-size: 9px;
     }
-    
+    nav {
+        padding-inline: 5px;
+    }
 }

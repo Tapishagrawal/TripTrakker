@@ -33,8 +33,12 @@ form.addEventListener("submit",(e)=>{
         pass: form['res-pass'].value,
         comPass: form['res-conFormPass'].value
     }
-    formLocalData.push(formData);
-    localStorage.setItem("form-data",JSON.stringify(formLocalData))
-    form.reset()
-    window.location.href = "login.html";
+    if(formData.pass===formData.comPass){
+        formLocalData.push(formData);
+        localStorage.setItem("form-data",JSON.stringify(formLocalData))
+        form.reset()
+        window.location.href = "login.html";
+    }else{
+        swal("Wrong Password", "Passwords did not match", "warning");
+    }
 })

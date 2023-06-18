@@ -10,6 +10,10 @@ body {
     padding: 0;
 }
 
+:root {
+    --swiper-theme-color: #568676 !important;
+}
+
 /* Loader Start */
 #preloader {
     text-align: center;
@@ -141,9 +145,17 @@ nav img {
     color: #fff8e9;
 }
 
-/* NAvbar End */
+.show-img {
+    width: 100%;
+}
 
-/* showcase section Start */
+.show-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* NAvbar End */
+/* showcase slide show start */
 .swiper {
     width: 100%;
     height: 100%;
@@ -165,7 +177,325 @@ nav img {
     object-fit: cover;
 }
 
-/* showcase section End */
+/* showcase slide show End */
+/*showcase section start*/
+
+.showcase-slider-img {
+    height: 500px;
+}
+
+.showcase-slider-img img {
+    width: 100%;
+}
+
+.showcase-slider-img img:hover {
+    cursor: grab;
+}
+
+.showcase-slider-img img:active {
+    cursor: grabbing;
+}
+
+.showcase-details {
+    padding: 50px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showcase-details:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #ddede8bf;
+}
+
+.showcase-details:nth-child(odd) {
+    background-color: #99c2a68c;
+}
+
+.showcase-details:nth-child(even) .show-title {
+    width: 40%;
+    text-align: right;
+}
+
+.showcase-details:nth-child(even) .show-title h1::before {
+    right: 0;
+}
+
+.show-title {
+    width: 40%;
+}
+
+.showcase-details:nth-child(even) .show-desc {
+    width: 50%;
+    margin-top: 60px;
+}
+
+.show-desc {
+    width: 60%;
+    text-align: justify;
+    margin-top: 60px;
+}
+
+.show-title h1 {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.show-title h1::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    top: -18px;
+    width: 50%;
+    background-color: #73ad9e;
+}
+
+/*showcase section End*/
+
+/*Book Btn  Start*/
+.book-btn{
+    width: 30%;
+    margin: auto;
+}
+.fa-star{
+    color: goldenrod;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.show-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showcase-rating{
+    color: gold;
+    display: inline;
+    font-size:25px;
+    font-weight: 700;
+}
+.showcase-price{
+    color: green;
+    font-size:25px;
+    font-weight: 700;
+}
+.book-btn>div:nth-child(2){
+    text-align: center;
+}
+.showcase-book-btn{
+    text-decoration: none;
+    background-color: #FACE54;
+    color: #000;
+    font-weight: 500;
+    padding: 7px 13px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.showcase-book-btn:hover{
+    color: white;
+    transform: scale(0.95);
+}
+/*Book Btn  End*/
+
+/* slideBar Start */
+#card-slide {
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#card-slide h1 {
+    position: relative;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+#card-slide h1::before {
+    position: absolute;
+    content: "";
+    height: 0.5px;
+    top: -18px;
+    width: 40%;
+    background-color: #73ad9e;
+}
+
+.card-container {
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+    scroll-behavior: smooth;
+
+}
+
+.card-container.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.card img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-img-cont {
+    width: 380px;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card-img-cont i {
+    position: absolute;
+    background-color: #92ccbd;
+    padding: 15px;
+    border-top-right-radius: 10px;
+    font-size: 20px;
+    bottom: 0px;
+    left: 0;
+
+}
+
+.card img:hover {
+    transform: scale(1.07);
+}
+
+.card>.card-img-cont+div {
+    width: 366px;
+    padding: 10px 10px 10px 22px;
+}
+
+.card>.card-img-cont+div p {
+    color: #666666;
+    font-size: 15px;
+    margin: 0;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card>.card-img-cont+div h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.cardbtn {
+    text-align: end;
+}
+
+.cardbtn i {
+    background-color: #7DBBAB;
+    padding: 9px 14px;
+    border-radius: 5px;
+    color: #3d5f57;
+}
+
+.cardbtn i:hover {
+    background-color: #73ad9e;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* SlideBar End */
+
+/* FAQ's Start */
+#faq-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+#faq-container h1 {
+    position: relative;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+#faq-container h1::before {
+    position: absolute;
+    content: "";
+    height: 0.5px;
+    top: -18px;
+    width: 40%;
+    background-color: #73ad9e;
+}
+
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-wrap {
+    width: 50%;
+}
+
+.faq-q-a {
+    margin-top: 30px;
+    border-bottom: 1px solid #b1b1b1;
+    transition: 0.4s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-question {
+    background-color: #fff;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.faq-question.active {
+    background-color: #f5f5f5;
+}
+
+.faq-q-a.active {
+    background-color: #f5f5f5;
+}
+
+.faq-q-a:hover .faq-question {
+    background-color: #f5f5f5;
+}
+
+.faq-q-a:hover {
+    background-color: #f5f5f5;
+}
+
+.faq-question i {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4c4c4c;
+}
+
+.faq-ans {
+    padding-inline: 20px;
+    text-align: justify;
+    display: none;
+}
+
+.faq-ans p {
+    color: #525252;
+}
+
+.faq-img {
+    width: 40%;
+}
+
+.faq-img img {
+    width: 100%;
+}
+
+/* FAQ's End */
 
 /* Footer End */
 footer {
@@ -343,10 +673,6 @@ ul {
 @media screen and (max-width: 426px) {
     .logo {
         width: 54%;
-    }
-
-    #hero h1 {
-        font-size: 19px;
     }
 
     .footer-col {
