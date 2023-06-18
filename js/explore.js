@@ -510,3 +510,9 @@ menu.addEventListener("click", () => {
     menu.classList.toggle("fa-x")
     nevMenu.classList.toggle("open")
 })
+window.addEventListener("scroll",()=>{
+    setTimeout(()=>{
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("sticky", window.scrollY > 0)
+    },200)
+})

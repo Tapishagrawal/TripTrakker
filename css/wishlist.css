@@ -65,13 +65,32 @@ header {
 /* NavBar Start */
 
 nav {
-    width: 90%;
+    width: 100%;
+    padding:20px ;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-block: 10px;
-
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #57887b;
+    transition: all 0.7s ease-in-out;
+    
+}
+nav.sticky{
+    background-color: #3da98c51;
+    backdrop-filter: blur(15px);
+    padding:10px 60px ;
+    font-weight: 500;
+    
+}
+nav.sticky .nav-manu a{
+    color: #1d322e;
+    font-weight: 500;
+    transition: all 0.7s ease-in-out;
 }
 .mobile-manu{
     display: none;
@@ -142,7 +161,11 @@ nav .fa-sharp::after{
 nav .fa-sharp:hover{
     cursor: pointer;
 }
-.btn {
+button{
+    background-color: transparent;
+    border: none;
+}
+.btn a{
     background-color: #FACE54;
     border: none;
     padding: 5px 12px;
@@ -151,6 +174,14 @@ nav .fa-sharp:hover{
     font-weight: 500;
     font-family: 'Poppins';
     transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+.btn a:hover{
+    background-color: #e8bf4e;
+    cursor: pointer;
+    color: #fff4db;
 }
 #btn-login,
 #btn-logout{
@@ -171,11 +202,6 @@ nav .fa-sharp:hover{
 nav>div:last-child .btn{
     display: none;
 }
-.btn:hover{
-    background-color: #e8bf4e;
-    cursor: pointer;
-    color: #fff4db;
-}
 #btn-login:hover,
 #btn-logout:hover{
     cursor: pointer;
@@ -189,6 +215,7 @@ nav>div:last-child .btn{
 #explore-card {
     width: 90%;
     margin: auto;
+    margin-top: 100px;
 }
 
 .empty{
@@ -295,13 +322,22 @@ nav>div:last-child .btn{
 }
 
 .explore-btn-cont a {
+    background-color: #376B62;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    transition: all 0.3s ease;
     text-decoration: none;
-    background-color: #3d5f57;
     color: #fff;
 }
 
 .explore-btn-cont a:hover {
-    color: #3d5f57;
+    background-color: #e8bf4e;
+    cursor: pointer;
+    color: #000;
 }
 .wishDeleteButton{
     background-color: transparent;
