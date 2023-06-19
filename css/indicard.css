@@ -125,8 +125,46 @@ nav img {
 .nav-manu>a:hover::before {
     width: 35px;
 }
+nav .fa-sharp{
+    color:#cfefe1;
+    font-size: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+nav .fa-sharp::after{
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #376B62   ;
+    border-radius: 50%;
+    top: -1px;
+    right: -4px;
+}
+button{
+    background-color: transparent;
+    border: none;
+}
+.btn a{
+    background-color: #FACE54;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
 
-#btn-logout {
+.btn a:hover{
+    background-color: #e8bf4e;
+    cursor: pointer;
+    color: #fff4db;
+}
+#btn-login,
+#btn-logout{
     background-color: transparent;
     border: 1px solid #1d322e;
     padding: 5px 15px;
@@ -138,11 +176,8 @@ nav img {
     text-decoration: none;
     color: #000;
 }
-
-#btn-logout:hover {
-    cursor: pointer;
-    background-color: #54827847;
-    color: #fff8e9;
+#btn-logout{
+    display: none;
 }
 
 .show-img {
