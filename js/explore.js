@@ -477,6 +477,7 @@ function display(data) {
             kowBtn.target = "_blank"
             if (flage === "true") {
                 window.open("indicard.html", "_blank")
+                item.quantity = 1;
                 arr.push(item)
                 localStorage.setItem("indicard-data", JSON.stringify(arr))
                 arr=[]

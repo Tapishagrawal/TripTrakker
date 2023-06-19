@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripTrekker | Book Tick</title>
+    <link rel="stylesheet" href="css/ticketPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>       
+    <!-- Header Navbar Saect Start -->
+    <header>
+        <nav>
+            <div class="mobile-manu">
+                <i class="fa-solid fa-bars "></i>
+            </div>
+            <div class="logo">
+                <img src="img/TripTrekker.png" alt="">
+            </div>
+            <div class="nav-manu">
+                <div class="logo">
+                    <img src="img/TripTrekker.png" alt="">
+                </div>
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div>
+                <a href="wishlist.html"><i class="fa-sharp fa-regular fa-heart"></i></a>
+                <button class="btn"><a href="explore.html">Book Now</a></button>
+                <a id="btn-logout" href="">Log out</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Navbar Saect End -->
+    <section class="book-ticket-container">
+        <h1>Book Your Ticket Now</h1>
+        <div class="tickt-section">
+            <div>
+                <img src="/knotty-sock-1389/img/bookImg.svg" alt="">
+            </div>
+            <div>
+                <form id="tickt-form">
+                    <div>
+                        <p>Where to</p>
+                        <input type="text"  id="placeName" placeholder="search place">
+                    </div>
+                    <div>
+                        <p>How Many</p>
+                        <input type="number" id="numberGuest" placeholder="number of guests">
+                        <!-- <span class="ticke-price-title">Price: <label id="tickt-price"></label></span> -->
+                    </div>
+                    <div>
+                        <p>Arrivals</p>
+                        <input type="date" id="arriDate">
+                    </div>
+                    <div>
+                        <p>Leaving</p>
+                        <input type="date" id="leavDate">
+                    </div>
+                    <div>
+                        <p>Mobile Number</p>
+                        <input type="number" id="mobNumber" placeholder="enter your mobile number">
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <input type="email" id="email" placeholder="enter your email address">
+                    </div>
+                    <div>
+                        <input type="submit" value="Book Ticket"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Start -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <img src="img/giflogo.gif"></img>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our sevice</a></li>
+                        <li><a href="#">policy</a></li>
+                        <li><a href="#">offer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order</a></li>
+                        <li><a href="#">payment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social-link">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+</body>
+<script src="js/ticketPage.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
