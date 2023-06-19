@@ -102,9 +102,11 @@ const menu = document.querySelector(".mobile-manu>i")
     })
 // mobile manu bar function End
 
+//navbar comes on scrooling strat
 window.addEventListener("scroll",()=>{
     setTimeout(()=>{
         var nav = document.querySelector("nav");
         nav.classList.toggle("sticky", window.scrollY > 0)
     },200)
 })
+//navbar comes on scrooling End

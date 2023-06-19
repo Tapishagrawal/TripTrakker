@@ -231,7 +231,7 @@ nav img {
 }
 
 .show-desc {
-    width: 60%;
+    width: 55%;
     text-align: justify;
     margin-top: 60px;
 }
@@ -590,6 +590,15 @@ ul {
     .footer-social-link a i {
         margin: 5px;
     }
+    .faq-question {
+        font-size: 14px;
+    }
+    .faq-ans p {
+        font-size: 12px;
+    }
+    .faq-img {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -600,7 +609,63 @@ ul {
     .nav-manu {
         width: 44%;
     }
-
+    .showcase-details{
+        flex-direction: column;
+    }
+    .show-title {
+        width: 100%;
+    }
+    .show-desc {
+        width: 100%;
+        margin-top: 0;
+    }
+    .showcase-details:nth-child(even) {
+        flex-direction: column;
+    }
+    .showcase-details:nth-child(even) .show-title {
+        width: 100%;
+        text-align: left;
+    }
+    .showcase-details:nth-child(even) .show-desc {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .show-title h1::before {
+        left: 0;
+    }
+    .card-img-cont {
+        width: 330px;
+        height: 312px;
+    }
+    .card img {
+        width: 100%;
+        height: 312px;
+    }
+    .card-container {
+        gap: 0px;
+    }
+    .card>.card-img-cont+div {
+        width: 350px;
+        padding: 10px 33px 10px 19px;
+    }
+    .card>.card-img-cont+div p {
+        font-size: 13px;
+    }
+    .faq-section {
+        flex-direction: column;
+    }
+    .faq-wrap {
+        width: 90%;
+    }
+    .faq-img {
+        width: 90%;
+    }
+    .faq-question {
+        font-size: 16px;
+    }
+    .faq-ans p {
+        font-size: 15px;
+    }
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
@@ -612,7 +677,7 @@ ul {
 
 }
 
-@media screen and (max-width: 591px) {
+@media screen and (max-width: 642px) {
     .mobile-manu {
         display: initial !important;
         cursor: pointer;
@@ -639,7 +704,15 @@ ul {
     nav img {
         width: 100px;
     }
-
+    .book-btn {
+        width: 90%;
+    }
+    .faq-question {
+        font-size: 12px;
+    }
+    .faq-ans p {
+        font-size: 12px;
+    }
     .footer-row {
         justify-content: center;
     }
@@ -659,6 +732,7 @@ ul {
     .nav-manu.open {
         display: initial;
         left: -25px;
+        z-index: 2;
     }
 
     .nav-manu.open a {
@@ -674,7 +748,14 @@ ul {
     .logo {
         width: 54%;
     }
-
+    #card-slide h1,
+    #explore-card h1 {
+        font-size: 23px;
+        font-weight: 600;
+    }
+    #card-slide {
+        width: 99%;
+    }
     .footer-col {
         width: 70%;
         margin-bottom: 30px;
