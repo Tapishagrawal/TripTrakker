@@ -1,20 +1,13 @@
 // lgo in logout Start
 let flage = localStorage.getItem("Islogin")
 const bookBtn = document.querySelector("nav>div:last-child .btn")
-const loginBtn = document.querySelector("#btn-login")
 const wisitHeartBtn = document.querySelector("nav .fa-sharp")
 
 if(flage === "true"){
     bookBtn.style.display = "initial"
     wisitHeartBtn.style.display = "initial"
-    loginBtn.style.display = "none"
 }
-logOutBtn.addEventListener("click",()=>{
-    localStorage.removeItem("Islogin")
-    bookBtn.style.display = "none"
-    wisitHeartBtn.style.display = "none"
-    loginBtn.style.display = "initial"
-})
+
 // lgo in logout Start
 
 // mobile manu bar function start
@@ -30,7 +23,7 @@ const LsData = JSON.parse(localStorage.getItem("indicard-data")) || []
 
 const formData = document.querySelector("form")
 
-let price = document.querySelector("#tickt-price")
+// let price = document.querySelector("#tickt-price")
 formData.addEventListener("submit", (e) =>{
     e.preventDefault();
     // let form = {
